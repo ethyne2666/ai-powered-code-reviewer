@@ -4,13 +4,17 @@ import Editor from 'react-simple-code-editor'
 import prism from 'prismjs'
 import './App.css'
 import axios from 'axios'
-import { use } from 'react'
+import Markdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
+import "highlight.js/styles/github-dark.css"
 
 function App() {
 
   const [code, setCode] = useState(`function sum(){
                       return 3+4;
                        }`)
+
+  const [review, setReview] = useState(``)
 
 
 
